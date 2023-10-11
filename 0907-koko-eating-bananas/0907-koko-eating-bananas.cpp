@@ -14,7 +14,7 @@ public:
     
     int minEatingSpeed(vector<int>& piles, int h) {
         long long int low = 1;
-        long long int high = accumulate(piles.begin(), piles.end(), 0LL); // Use 0LL to ensure long long int
+        long long int high =*max_element(piles.begin(), piles.end());
         long long int limit = 0;
         while (low <= high)
         {
